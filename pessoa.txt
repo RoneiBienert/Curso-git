@@ -1,0 +1,39 @@
+unit Pessoa;
+
+interface
+
+Type
+  TPessoa = class
+  class var
+    FPessoa: TPessoa;
+  public
+    class property Pessoa: TPessoa read FPessoa write FPessoa;
+    procedure Diga_Ola(ANome, ASobrenome: String);
+  end;
+
+  function ObterPessoa: TPessoa;
+
+implementation
+
+uses
+  Vcl.Dialogs;
+
+  function ObterPessoa: TPessoa;
+  begin
+    if not(Assigned(TPessoa.FPessoa)) then
+      TPessoa.FPessoa := TPessoa.Create;
+    Result := TPessoa.FPessoa;
+  end;
+
+
+{ TPessoa }
+
+procedure TPessoa.Diga_Ola(ANome, ASobrenome: String);
+begin
+  ShowMessage('Ola ' + ANome + ' ' + ASobrenome + '!  ');
+end;
+
+initialization
+  ObterPessoa;
+
+end.
