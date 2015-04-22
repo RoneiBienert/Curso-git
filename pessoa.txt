@@ -35,6 +35,9 @@ begin
     ShowMessage('guti guti')
   else
     ShowMessage('Ola ' + ANome + ' ' + ASobrenome + ' ' + IntToStr(AIdade) + ' ' + ASexo);
+ 
+  ShowMessage('The end');
+
 end;
 
 initialization
