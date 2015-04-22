@@ -8,7 +8,7 @@ Type
     FPessoa: TPessoa;
   public
     class property Pessoa: TPessoa read FPessoa write FPessoa;
-    procedure Diga_Ola(ANome, ASobrenome: String);
+    procedure Diga_Ola(ANome, ASobrenome: String; AIdade: Integer);
   end;
 
   function ObterPessoa: TPessoa;
@@ -28,9 +28,9 @@ uses
 
 { TPessoa }
 
-procedure TPessoa.Diga_Ola(ANome, ASobrenome: String);
+procedure TPessoa.Diga_Ola(ANome, ASobrenome: String; AIdade: Integer);
 begin
-  ShowMessage('Ola ' + ANome + ' ' + ASobrenome + '!  ');
+  ShowMessage('Ola ' + ANome + ' ' + ASobrenome + ' ' + IntToStr(AIdade));
 end;
 
 initialization
