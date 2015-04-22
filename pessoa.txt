@@ -1,4 +1,4 @@
-unit Pessoa;
+﻿unit Pessoa;
 
 interface
 
@@ -31,7 +31,10 @@ uses
 
 procedure TPessoa.Diga_Ola(ANome, ASobrenome, ASexo: String; AIdade: Integer);
 begin
-  ShowMessage('Ola ' + ANome + ' ' + ASobrenome + ' ' + IntToStr(AIdade));
+  if (Aidade < 2) then
+    ShowMessage('guti guti')
+  else
+    ShowMessage('Ola ' + ANome + ' ' + ASobrenome + ' ' + IntToStr(AIdade) + ' ' + ASexo);
 end;
 
 initialization
