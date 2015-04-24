@@ -1,11 +1,6 @@
 ﻿# Curso git
 
 
-fsdsdf
-sdfsd
-
-
-
 # Projeto
 
 Criar um protótipo de um framework genérico de notificação ao usuário, que possa ser usado em diferentes aplicativos.
